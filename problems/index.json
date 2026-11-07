@@ -1,0 +1,110 @@
+[
+ {
+  "id": "aplusb",
+  "title": "A + B",
+  "level": "Хялбар",
+  "tags": [
+   "анхан шат"
+  ],
+  "tl": 1.0,
+  "ml": 256,
+  "checker": "tokens",
+  "samples": [
+   "01",
+   "02"
+  ],
+  "subtasks": [],
+  "tests": [
+   {
+    "name": "01",
+    "in": "tests/01.in",
+    "out": "tests/01.out"
+   },
+   {
+    "name": "02",
+    "in": "tests/02.in",
+    "out": "tests/02.out"
+   },
+   {
+    "name": "03",
+    "in": "tests/03.in",
+    "out": "tests/03.out"
+   },
+   {
+    "name": "04",
+    "in": "tests/04.in",
+    "out": "tests/04.out"
+   }
+  ]
+ },
+ {
+  "id": "max-subarray",
+  "title": "Хамгийн их дэд массив",
+  "level": "Дунд",
+  "tags": [
+   "динамик програмчлал",
+   "Kadane"
+  ],
+  "tl": 1.0,
+  "ml": 256,
+  "checker": "tokens",
+  "samples": [
+   "01"
+  ],
+  "subtasks": [
+   {
+    "score": 30,
+    "name": "N ≤ 1000",
+    "tests": [
+     "01",
+     "02",
+     "03"
+    ]
+   },
+   {
+    "score": 70,
+    "name": "N ≤ 200000",
+    "tests": [
+     "01",
+     "02",
+     "03",
+     "04",
+     "05",
+     "06"
+    ]
+   }
+  ],
+  "tests": [
+   {
+    "name": "01",
+    "in": "tests/01.in",
+    "out": "tests/01.out"
+   },
+   {
+    "name": "02",
+    "in": "tests/02.in",
+    "out": "tests/02.out"
+   },
+   {
+    "name": "03",
+    "in": "tests/03.in",
+    "out": "tests/03.out"
+   },
+   {
+    "name": "04",
+    "in": "tests/04.in",
+    "out": "tests/04.out"
+   },
+   {
+    "name": "05",
+    "in": "tests/05.in",
+    "out": "tests/05.out"
+   },
+   {
+    "name": "06",
+    "in": "tests/06.in",
+    "out": "tests/06.out"
+   }
+  ]
+ }
+]

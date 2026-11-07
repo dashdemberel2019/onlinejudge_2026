@@ -1,0 +1,9 @@
+{
+  "title": "A + B",
+  "tl": 1.0,
+  "ml": 256,
+  "level": "Хялбар",
+  "tags": ["анхан шат"],
+  "checker": "tokens",
+  "samples": ["01", "02"]
+}

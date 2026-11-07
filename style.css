@@ -1,0 +1,70 @@
+:root {
+  --bg: #f6f7f9; --card: #fff; --text: #1d2330; --muted: #6b7385; --line: #e3e6ec;
+  --accent: #2456d6; --ac: #1a8a4a; --wa: #c62f2f; --tle: #b7791f; --re: #8a3fc7; --ce: #5c6475;
+  --mono: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+}
+* { box-sizing: border-box; }
+body { margin: 0; font: 15px/1.55 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; color: var(--text); background: var(--bg); }
+a { color: var(--accent); text-decoration: none; }
+a:hover { text-decoration: underline; }
+.top { display: flex; align-items: center; justify-content: space-between; padding: 12px 24px; background: var(--card); border-bottom: 1px solid var(--line); position: sticky; top: 0; z-index: 5; }
+.brand { font-weight: 700; font-size: 18px; color: var(--text); }
+.judge-status { font-size: 13px; color: var(--muted); }
+.judge-status.ready { color: var(--ac); }
+.judge-status.loading { color: var(--tle); }
+main { max-width: 1400px; margin: 0 auto; padding: 20px 24px 40px; }
+.foot { text-align: center; color: var(--muted); font-size: 13px; padding: 16px; }
+.muted { color: var(--muted); }
+
+/* Жагсаалт */
+.toolbar { display: flex; gap: 10px; margin-bottom: 14px; flex-wrap: wrap; }
+.toolbar input, .toolbar select { padding: 8px 10px; border: 1px solid var(--line); border-radius: 6px; font: inherit; background: var(--card); }
+.toolbar input { flex: 1; min-width: 200px; }
+table.list { width: 100%; border-collapse: collapse; background: var(--card); border: 1px solid var(--line); border-radius: 8px; overflow: hidden; }
+table.list th, table.list td { padding: 10px 14px; text-align: left; border-bottom: 1px solid var(--line); }
+table.list th { font-size: 13px; color: var(--muted); font-weight: 600; background: #fafbfc; }
+table.list tr:last-child td { border-bottom: 0; }
+.tag { display: inline-block; font-size: 12px; padding: 1px 8px; border-radius: 10px; background: #eef1f7; color: #45506a; margin-right: 4px; }
+.score { font-weight: 600; font-variant-numeric: tabular-nums; }
+.score.full { color: var(--ac); }
+.score.part { color: var(--tle); }
+
+/* Бодлогын хуудас */
+.problem { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 20px; align-items: start; }
+@media (max-width: 960px) { .problem { grid-template-columns: 1fr; } }
+.card { background: var(--card); border: 1px solid var(--line); border-radius: 8px; padding: 18px 22px; }
+.statement h1 { margin: 0 0 4px; font-size: 24px; }
+.limits { color: var(--muted); font-size: 13px; margin-bottom: 14px; }
+.statement h2 { font-size: 17px; margin: 20px 0 6px; }
+.statement table { border-collapse: collapse; }
+.statement th, .statement td { border: 1px solid var(--line); padding: 4px 10px; }
+.statement code { font-family: var(--mono); background: #f1f3f6; padding: 1px 4px; border-radius: 3px; font-size: 13px; }
+.samples { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 8px; }
+.samples .label { font-size: 12px; color: var(--muted); display: flex; justify-content: space-between; }
+.samples pre, pre.io { margin: 2px 0 8px; background: #f7f8fa; border: 1px solid var(--line); border-radius: 6px; padding: 8px 10px; font: 13px/1.4 var(--mono); white-space: pre; overflow: auto; max-height: 260px; }
+.copy { cursor: pointer; color: var(--accent); }
+.side { position: sticky; top: 64px; display: flex; flex-direction: column; gap: 14px; }
+.CodeMirror { height: 440px; border: 1px solid var(--line); border-radius: 6px; font: 13.5px/1.45 var(--mono); }
+textarea.code { width: 100%; height: 440px; font: 13.5px/1.45 var(--mono); }
+.actions { display: flex; gap: 10px; align-items: center; margin-top: 10px; flex-wrap: wrap; }
+button { font: inherit; padding: 8px 16px; border-radius: 6px; border: 1px solid var(--line); background: var(--card); cursor: pointer; }
+button.primary { background: var(--accent); border-color: var(--accent); color: #fff; font-weight: 600; }
+button:disabled { opacity: .55; cursor: default; }
+.custom textarea { width: 100%; min-height: 70px; font: 13px var(--mono); border: 1px solid var(--line); border-radius: 6px; padding: 6px 8px; }
+details summary { cursor: pointer; color: var(--muted); font-size: 14px; }
+
+/* Үр дүн */
+.verdict { display: inline-block; min-width: 42px; text-align: center; font-weight: 700; font-size: 12px; padding: 2px 6px; border-radius: 4px; color: #fff; }
+.v-AC { background: var(--ac); } .v-WA { background: var(--wa); } .v-TLE { background: var(--tle); }
+.v-RE, .v-MLE, .v-OLE { background: var(--re); } .v-CE { background: var(--ce); } .v-RUN, .v-WAIT { background: #9aa3b5; }
+.summary { font-size: 18px; font-weight: 700; margin-bottom: 8px; }
+table.res { width: 100%; border-collapse: collapse; font-size: 13.5px; }
+table.res td, table.res th { padding: 5px 8px; border-bottom: 1px solid var(--line); text-align: left; }
+table.res th { color: var(--muted); font-weight: 600; font-size: 12px; }
+table.res tr.st td { background: #fafbfc; font-weight: 600; }
+table.res tr.clickable { cursor: pointer; }
+table.res tr.clickable:hover td { background: #f3f6fc; }
+pre.celog { background: #1e2230; color: #e7e9ee; padding: 10px; border-radius: 6px; font: 12.5px/1.4 var(--mono); white-space: pre-wrap; max-height: 320px; overflow: auto; }
+.detail { padding: 6px 0 10px; }
+.detail .grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 8px; }
+@media (max-width: 700px) { .detail .grid { grid-template-columns: 1fr; } }
